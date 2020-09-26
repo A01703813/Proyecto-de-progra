@@ -19,13 +19,14 @@ if registro>=10: #si son mas de 10 personas, habra regalos
 
 
 niño=(input("¿Es niño? 's' para indicar que si es:"))
-while niño=="s":
-    edad=int(input("edad del niño:"))#si hay niños, introducir la edad del niño
-    if 1<=edad <= 5:
-        print("postre para el niño")#si el niño tiene 5 años ó menos, se le regalará un postre
-    elif edad<0:
-        print("intentelo de nuevo")
-    elif edad >5:
-        print("no se encuentra dentro de los requisitos")
-
+if niño =="s":
+    edad=int(input("Edad: "))
+    if edad <5:
+        print("postre gratis!!")
+    elif (edad>5)and (edad<12):
+        print("Bienvenido")
+    else:
+        print("no es un niño")
+elif niño=="no":
+    print("no tiene ningun descuento")
     
