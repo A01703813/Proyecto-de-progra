@@ -1,4 +1,3 @@
-#
 
 # Monto a pagar de lo consumido en el restaurante
 monto=float(input("monto a pagar: $"))
@@ -46,4 +45,4 @@ for fila in aumento_100:
         print (col)
 print("El 5 es el ganador")  # el quinto conjunto sera siempre el establecido para ganar..El aumento de proporcion
                               # en su comida:)
-    
+ # El ultimo avance es listas anidadas, por lo que ya es aplicado   
