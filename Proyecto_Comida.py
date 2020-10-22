@@ -11,12 +11,9 @@ import random  # Para obtener un numero aleatorio
 """
 
 
-
 """
 ================== Biblioteca  =====================================
 """
-
-
 
 """ Ahora se daran una lista de precios de los
     paquetes que hay en el menu
@@ -26,7 +23,6 @@ print ("Paquetes del menu")
 menu = [300, 250, 320, 230, 100, 250, 410, 120]
 for pos in range(len(menu)):
     print ("Paquete", pos, "cuesta", menu[pos])
-
 
 
 """ Monto a pagar de lo consumido en el restaurante_
