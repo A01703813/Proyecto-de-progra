@@ -1,97 +1,127 @@
-============================ Ejemplo 1 =====================================
+============================ Correccion 1 =====================================
 Sub-Competencia: 
         componente: plantea una situación problema que le permite aplicar y demostrar sus conocimientos de programación (avance 1)
 
-Error original: La situacion problema no la habia planteado, no entregue este avance 1 
+Error original: La situacion problema no la habia planteado, no entregue este avance 1. No hubo readme 
 
-Cambio realizado: añadi una situación problema
+Cambio realizado: añadi una situación problema, tambien se puede observar en readme: 
+        Proyecto de programación.
+        Contexto.
+        El proyecto surge de la necesidad de establecer un sistema en un restaurante, para tener una buena administración del dinero. 
+        Ante esto el proyecto consiste en ingresar el monto de las personas (lo consumido), asimilando si es cliente se la aplicara un 
+        descuento de lo contrario solo pagara el monto; asi tambien se identifican elementos como dar descuentos si las personas ingresadas son 16 o mas;
+        tambien se dan atractivos regalos si las personas vienen con niños menores a 6 años, en este caso se les entrega postre gratis. Todo esto requiere de un
+        sistema que se adecue a las expectativas del restaurante, ante esto se realiza el proyecto de tal forma.
+        Lo que realiza es que facilita el manejo en el restaurante, al tener las operaciones al instante, como son los porcentajes de descuento, los montos que una 
+        persona obtuvo, los obsequios que se dan, te brinda los paquetes que hay; practicamente agiliza los procesos.
 
-Líneas de código donde se ve la corrección:
+        Instrucciones.
+        Descargar el archivo y abrir en Thonny y dar boton de play
+        Responder a las preguntas que aparecen, el programa tiene instrucciones.
 
-============================ Ejemplo 2 =====================================
+        Líneas de código donde se ve la corrección: 3 a 6 y tambien en readme.
+
+============================ Correccion 2 =====================================
 Sub-Competencia: 
+        componente: aplica estructuras cíclicas para resolver un problema de manera eficiente (avance 4)
 
-Error original:
+Error original: El ciclo estaba mal elaborado
+
+Cambio realizado: Aplique el ciclo for para determinar cuanto cuestan algunos paquetes.
+        print ("Paquetes del menu")
+        menu = [300, 250, 320, 230, 100, 250, 410, 120]
+        for pos in range(len(menu)):
+                print ("Paquete", pos, "cuesta", menu[pos])
+        
+        # promedio de clientes en la semana
+        def promedio(semana):
+                acum = 0.0
+                for elem in semana:
+                        acum = acum+elem
+                return acum/len(semana)
+        print (promedio([73, 97, 125, 115, 120, 92, 82]))
+        
+Líneas de código donde se ve la corrección: 
+        21 a 28  Ciclo for de paquetes
+        52 a 58  Ciclo for del promedio
+
+============================ Correccion 3 =====================================
+Sub-Competencia: 
+        componente: usa la forma más a apropiada para guardar los datos (listas, variable, tipo de dato, etc...) (avance 5)
+
+Error original: La lista era la misma, solo que aplicaba el ciclo for para establecer un numero ganador, yo establecia que el 5 siempre ganaria.
+        print ("Ahora se realizará una rifa")
+        aumento_100 = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9],
+                [0]
+                ]
+                for fila in aumento_100:
+                        for col in fila:
+                                print(col)
+Cambio realizado: Ahora en la lista se tomara un valor aleatorio, para que sea el ganador
+        """ Habra rifa cada semana se estara registrando
+        con numero del 1 al 9 el conjunto de personas
+        que entre. (si una familia entra despues de las
+        12pm sera registrado como el num 1, en el sorteo de aumento en
+        100gr tu comida) sorteo Random, utilizando biblioteca extra
+        """
+        print ("Ahora se realizará una rifa")
+        aumento_100 = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+                ]
+
+        familia_ganadora = random.choice(aumento_100) # se obtiene un numero aleatorio
+        numero_ganador = random.choice(familia_ganadora) # se establece el ganador aleatoriamente
+        print ("El numero ganador es", numero_ganador)
+
+Líneas de código donde se ve la corrección: 85 a 100
+
+
+============================ Correccion 4 =====================================
+Sub-Competencia: 
+        Aplica funciones de manera adecuada para segmentar el código y mantener reusabilidad y modularidad (avance 2)
+
+Error original: Funcion mal elaborada
 
 Cambio realizado:
+        # promedio de clientes en la semana
+        def promedio(semana):
+                acum = 0.0
+                for elem in semana:
+                        acum = acum+elem
+                return acum/len(semana)
+        print (promedio([73, 97, 125, 115, 120, 92, 82]))
 
-Líneas de código donde se ve la corrección:
-
-# biblioteca 
-import random 
-""" Monto a pagar de lo consumido en el restaurante_
-    Preguntar si es cliente_
-    Hacer descuento si es cliente_
-    Cualquier persona que consuma una cantidad de $1500 o
-    mas, se le hara el 10% de descuento
-"""
-monto = float(input("monto a pagar: $"))
-cliente = input("¿usted es cliente?'s' para indicar 'si':")
-if cliente == "s":
-    descuento = int(input("porcentaje de descuento:"))
-    monto = monto-((descuento/100)*monto)
-elif 1500 <= monto:
-    descuento_consumo = monto*0.10
-    monto = monto-descuento_consumo
-
-print ("monto a pagar: $", monto)
+Líneas de código donde se ve la corrección: 52 a 58
 
 
-""" Hacer registro de las personas que entran en grupo
-    si son mas de 16 personas, habra regalos
-"""
-registro = int(input("personas ingresadas:"))
-if registro >= 16:
-    print ("regalos para ustedes")
+============================ Correccion 5 =====================================
+Sub-Competencia:
+        Usa una biblioteca de python extra (a las vistas en el temario) que investiga por su cuenta (avance 1).
+        
+        Explica como funciona la biblioteca extra (avance 1).
 
-""" si las personas vienen con niños, se les preguntara
-    la edad, si los niños son menores a 6 años ellos tendran
-    postre gratis!!
-"""
-niño = (input("¿Es niño? 's' para indicar que si es:"))
-if niño == "s":
-    edad = int(input("Edad: "))
-    if edad < 6:
-        print ("postre gratis!!")
-    elif (edad > 5) and (edad < 12):
-        print ("Bienvenido")
-    else:
-        print ("no es un niño")
-elif niño == "no":
-    print ("no tiene ningun descuento")
+Error original: No habia puesto una biblioteca, ya que no entendia bien el proceso. hasta que tome algunas asesorias y pude comprender. 
 
+Cambio realizado: Aplique la biblioteca de random
+        import random # Para obtener un numero aleatorio
+        
+        print ("Ahora se realizará una rifa")
+        aumento_100 = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+                ]
 
-""" Habra rifa cada semana se estara registrando
-    con numero del 1 al 9 el conjunto de personas
-    que entre. (si una familia entra despues de las
-    12pm sera registrado como el num 1, en el sorteo de aumento en
-    100gr tu comida) sorteo Random, utilizando biblioteca extra
-"""
-print ("Ahora se realizará una rifa")
-aumento_100 = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+        familia_ganadora = random.choice(aumento_100) # se obtiene un numero aleatorio del conjunto de familias
+        numero_ganador = random.choice(familia_ganadora) # se establece el ganador aleatoriamente
+        print ("El numero ganador es", numero_ganador)
+        
 
-familia_ganadora = random.choice(aumento_100)
-numero_ganador = random.choice(familia_ganadora)
-print ("El numero ganador es", numero_ganador)
-
-
-""" Ahora se daran una lista de precios de los
-    paquetes que hay en el menu
-"""
-
-print ("Paquetes del menu")
-menu = [300, 250, 320, 230, 100, 250, 410, 120]
-for pos in range(len(menu)):
-    print ("Paquete", pos, "cuesta", menu[pos])
-
-# promedio de clientes en la semana
-def promedio(semana):
-    acum = 0.0
-    for elem in semana:
-        acum = acum+elem
-    return acum/len(semana)
-print (promedio([73, 97, 125, 115, 120, 92, 82]))
+Líneas de código donde se ve la corrección: 
+        1         import random
+        85 a 100  utilizando random.choice
